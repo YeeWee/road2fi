@@ -6,7 +6,7 @@ A marketing website and blog for a personal investment firm helping ordinary peo
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** - Project setup, layout infrastructure, content layer
+- [x] **Phase 1: Foundation** — Project setup, layout infrastructure, content layer — *2026-04-26*
 - [ ] **Phase 2: Marketing Pages** - Homepage with hero, philosophy, about, header/footer
 - [ ] **Phase 3: Blog System** - Blog list page and individual post pages with Markdown rendering
 - [ ] **Phase 4: Content Generator** - Hidden /gen page for AI-powered blog post creation
@@ -27,11 +27,11 @@ A marketing website and blog for a personal investment firm helping ordinary peo
 **Plans**: 5 plans
 
 Plans:
-- [ ] 01-01: Initialize Next.js 16 project with App Router and TypeScript
-- [ ] 01-02: Configure Tailwind CSS v4 with CSS-based configuration
-- [ ] 01-03: Set up global layout with navigation header and footer
-- [ ] 01-04: Create content layer (lib/posts.ts) for reading Markdown files with frontmatter
-- [ ] 01-05: Configure next/font for typography with self-hosted Google Fonts
+- [x] 01-01: Initialize Next.js 16 project with App Router and TypeScript
+- [x] 01-02: Configure Tailwind CSS v4 with CSS-based configuration
+- [x] 01-03: Set up global layout with navigation header and footer
+- [x] 01-04: Create content layer (lib/posts.ts) for reading Markdown files with frontmatter
+- [x] 01-05: Configure next/font for typography with self-hosted Google Fonts
 
 ### Phase 2: Marketing Pages
 **Goal**: Homepage with hero section, investment philosophy, About Us, and global navigation footer
@@ -100,7 +100,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/5 | Not started | - |
+| 1. Foundation | 5/5 | Complete | 2026-04-26 |
 | 2. Marketing Pages | 0/4 | Not started | - |
 | 3. Blog System | 0/6 | Not started | - |
 | 4. Content Generator | 0/5 | Not started | - |
