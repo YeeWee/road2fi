@@ -28,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${newsreader.variable} ${outfit.variable} font-sans antialiased`}>
+      <body className={`${newsreader.variable} ${outfit.variable} font-sans antialiased bg-cream`}>
         <Header />
         <main>{children}</main>
         <Footer />

@@ -5,7 +5,7 @@ export default async function BlogPage() {
   const posts = await getAllPosts()
 
   return (
-    <section className="py-16 sm:py-20 bg-cream">
+    <section className="py-16 sm:py-24 bg-cream">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-14 text-center">
@@ -18,6 +18,7 @@ export default async function BlogPage() {
           <p className="text-lg text-warm-gray-500 max-w-lg mx-auto" style={{ textWrap: "balance" }}>
             From our journey toward Financial Independence.
           </p>
+          <hr className="warm-divider max-w-xs mx-auto mt-8" />
         </div>
 
         {/* Posts grid */}
