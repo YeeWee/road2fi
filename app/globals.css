@@ -38,6 +38,16 @@
   --text-fluid-lead: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
 }
 
+/* Hide scrollbar globally */
+* {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+*::-webkit-scrollbar {
+  display: none;  /* Chrome/Safari/Opera */
+}
+
 /* Base typography */
 body {
   font-family: var(--font-sans), system-ui, sans-serif;

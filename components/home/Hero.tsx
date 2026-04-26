@@ -21,39 +21,6 @@ export default function Hero() {
           <rect width="100%" height="100%" fill="url(#grid)" />
         </svg>
 
-        {/* Compound growth curve — bottom-right corner, fully contained */}
-        <svg
-          className="absolute bottom-0 right-0 w-[35vw] max-w-[420px] h-[65vh] opacity-[0.08] lg:opacity-[0.1]"
-          viewBox="0 0 420 500"
-          preserveAspectRatio="xMidYMax meet"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          {/* Curve */}
-          <path
-            d="M 10 460 C 40 440, 80 410, 120 370 C 160 330, 200 280, 240 220 C 280 160, 320 100, 360 55 C 380 32, 400 18, 415 10"
-            stroke="oklch(0.55 0.15 80)"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            fill="none"
-          />
-          {/* Fill under curve */}
-          <path
-            d="M 10 460 C 40 440, 80 410, 120 370 C 160 330, 200 280, 240 220 C 280 160, 320 100, 360 55 C 380 32, 400 18, 415 10 L 415 500 L 10 500 Z"
-            fill="oklch(0.55 0.15 80)"
-            opacity="0.2"
-          />
-          {/* Data points */}
-          <circle cx="120" cy="370" r="2.5" fill="oklch(0.55 0.15 80)" />
-          <circle cx="240" cy="220" r="2.5" fill="oklch(0.55 0.15 80)" />
-          <circle cx="360" cy="55" r="2.5" fill="oklch(0.55 0.15 80)" />
-          <circle cx="415" cy="10" r="3" fill="oklch(0.55 0.15 80)" />
-          {/* Reference lines */}
-          <line x1="120" y1="370" x2="120" y2="500" stroke="oklch(0.55 0.15 80)" strokeWidth="0.5" strokeDasharray="3 3" />
-          <line x1="240" y1="220" x2="240" y2="500" stroke="oklch(0.55 0.15 80)" strokeWidth="0.5" strokeDasharray="3 3" />
-          <line x1="360" y1="55" x2="360" y2="500" stroke="oklch(0.55 0.15 80)" strokeWidth="0.5" strokeDasharray="3 3" />
-        </svg>
-
         {/* Left accent circles */}
         <svg
           className="absolute left-4 bottom-12 w-[12vw] max-w-[150px] opacity-[0.04]"
