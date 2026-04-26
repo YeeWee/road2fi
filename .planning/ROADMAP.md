@@ -9,7 +9,7 @@ A marketing website and blog for a personal investment firm helping ordinary peo
 - [x] **Phase 1: Foundation** — Project setup, layout infrastructure, content layer — *2026-04-26*
 - [x] **Phase 2: Marketing Pages** - Homepage with hero, philosophy, about, header/footer — *2026-04-26*
 - [x] **Phase 3: Blog System** - Blog list page and individual post pages with Markdown rendering — *2026-04-26*
-- [ ] **Phase 4: Content Generator** - Hidden /gen page for AI-powered blog post creation
+- [x] **Phase 4: Content Generator** - Hidden /gen page for AI-powered blog post creation — *2026-04-26*
 
 ## Phase Details
 
@@ -86,11 +86,11 @@ Plans:
 **Plans**: 5 plans
 
 Plans:
-- [ ] 04-01: Build hidden /gen page with URL input form (no nav link)
-- [ ] 04-02: Implement server-side URL scraping for YouTube and article URLs
-- [ ] 04-03: Integrate OpenAI-compatible API for LLM content generation
-- [ ] 04-04: Build article generation logic (first-person voice, structured format, thumbnail extraction)
-- [ ] 04-05: Build preview panel and save functionality (Markdown file creation)
+- [x] 04-01: Build hidden /gen page with URL input form (no nav link)
+- [x] 04-02: Implement server-side URL scraping for YouTube and article URLs
+- [x] 04-03: Integrate OpenAI-compatible API for LLM content generation
+- [x] 04-04: Build article generation logic (first-person voice, structured format, thumbnail extraction)
+- [x] 04-05: Build preview panel and save functionality (Markdown file creation)
 
 ## Progress
 
@@ -99,4 +99,4 @@ Plans:
 | 1. Foundation | 5/5 | Complete | 2026-04-26 |
 | 2. Marketing Pages | 4/4 | Complete | 2026-04-26 |
 | 3. Blog System | 2/2 | Complete | 2026-04-26 |
-| 4. Content Generator | 5/5 | Planned | - |
+| 4. Content Generator | 5/5 | Complete | 2026-04-26 |
