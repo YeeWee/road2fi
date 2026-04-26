@@ -61,3 +61,25 @@ export async function getAllPostSlugs(): Promise<string[]> {
     .filter((filename) => filename.endsWith(".md"))
     .map((filename) => filename.replace(/\.md$/, ""))
 }
+
+export async function savePost(params: {
+  slug: string
+  title: string
+  date: string
+  excerpt: string
+  thumbnail: string
+  content: string
+}) {
+  fs.mkdirSync(postsDirectory, { recursive: true })
+
+  const filePath = path.join(postsDirectory, `${params.slug}.md`)
+  const frontmatter = {
+    title: params.title,
+    date: params.date,
+    excerpt: params.excerpt,
+    thumbnail: params.thumbnail,
+  }
+  const fileContent = matter.stringify(params.content, frontmatter)
+  fs.writeFileSync(filePath, fileContent, 'utf8')
+  return { slug: params.slug, path: filePath }
+}

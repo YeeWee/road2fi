@@ -1,6 +1,6 @@
 'use client'
 import { useState } from 'react'
-import { generatePost } from './actions'
+import { generatePost, savePostAction } from './actions'
 
 interface GeneratedPost {
   title: string
@@ -44,8 +44,22 @@ export default function GenForm() {
 
   async function handleSave() {
     if (!result) return
-    // savePostAction will be implemented in plan 04-05
-    setError('Save functionality is not yet implemented.')
+    setLoading(true)
+    setError(null)
+    const saveResult = await savePostAction({
+      slug: result.slug,
+      title: result.title,
+      content: result.content,
+      excerpt: result.excerpt,
+      thumbnail: result.thumbnail,
+    })
+    setLoading(false)
+    if (saveResult.success) {
+      setResult(null)
+      setUrl('')
+    } else {
+      setError(saveResult.error || 'Failed to save post')
+    }
   }
 
   function handleDiscard() {
@@ -69,9 +83,10 @@ export default function GenForm() {
             <button
               type="button"
               onClick={handleSave}
-              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+              disabled={loading}
+              className="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
             >
-              Save Post
+              {loading ? 'Saving...' : 'Save Post'}
             </button>
             <button
               type="button"

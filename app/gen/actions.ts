@@ -2,6 +2,8 @@
 import { isValidUrl, detectUrlType } from '../../lib/url-utils'
 import { scrapeContent } from '../../lib/scraper'
 import { generateBlogPost } from '../../lib/generator'
+import { savePost } from '../../lib/posts'
+import { revalidatePath } from 'next/cache'
 
 interface GenerateResult {
   success: boolean
@@ -54,6 +56,33 @@ export async function generatePost(url: string): Promise<GenerateResult> {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'An unexpected error occurred',
+    }
+  }
+}
+
+export async function savePostAction(post: {
+  slug: string
+  title: string
+  content: string
+  excerpt: string
+  thumbnail: string
+}): Promise<{ success: boolean; path?: string; error?: string }> {
+  try {
+    const date = new Date().toISOString().split('T')[0]
+    const result = await savePost({
+      slug: post.slug,
+      title: post.title,
+      date,
+      excerpt: post.excerpt,
+      thumbnail: post.thumbnail,
+      content: post.content,
+    })
+    revalidatePath('/blog')
+    return { success: true, path: result.path }
+  } catch (error) {
+    return {
+      success: false,
+      error: error instanceof Error ? error.message : 'Failed to save post',
     }
   }
 }
