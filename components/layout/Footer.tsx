@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
         {/* Bottom bar */}
         <div className="flex flex-col items-center gap-4 border-t border-gray-200 pt-8 text-sm text-gray-600 sm:flex-row sm:justify-between">
-          <p>&copy; {year} Road to Fi. All rights reserved.</p>
+          <p>&copy; {year} Road2Fi.com. All rights reserved.</p>
           <div className="flex gap-4">
             <Link href="/blog" className="hover:text-gray-900">
               Blog

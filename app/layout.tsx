@@ -11,7 +11,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Road to Fi — Financial Independence",
+  title: "Road2Fi.com -Your Road to Financial Independence",
   description: "Helping ordinary people achieve Financial Independence through clear, actionable investment insights.",
 }
 
