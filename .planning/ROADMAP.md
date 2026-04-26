@@ -7,7 +7,7 @@ A marketing website and blog for a personal investment firm helping ordinary peo
 ## Phases
 
 - [x] **Phase 1: Foundation** — Project setup, layout infrastructure, content layer — *2026-04-26*
-- [ ] **Phase 2: Marketing Pages** - Homepage with hero, philosophy, about, header/footer
+- [x] **Phase 2: Marketing Pages** - Homepage with hero, philosophy, about, header/footer — *2026-04-26*
 - [ ] **Phase 3: Blog System** - Blog list page and individual post pages with Markdown rendering
 - [ ] **Phase 4: Content Generator** - Hidden /gen page for AI-powered blog post creation
 
@@ -47,10 +47,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 02-01: Build homepage hero section with headline, subheadline, and call-to-action
-- [ ] 02-02: Build investment philosophy section with 3-4 value investing principles
-- [ ] 02-03: Build "About Us" section with founder story and firm background
-- [ ] 02-04: Build navigation header and footer with proper links and styling
+- [x] 02-01: Build homepage hero section with headline, subheadline, and call-to-action
+- [x] 02-02: Build investment philosophy section with 3-4 value investing principles
+- [x] 02-03: Build "About Us" section with founder story and firm background
+- [x] 02-04: Build navigation header and footer with proper links and styling
 
 ### Phase 3: Blog System
 **Goal**: Blog listing page and individual post pages with full Markdown rendering
@@ -101,6 +101,6 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete | 2026-04-26 |
-| 2. Marketing Pages | 0/4 | Not started | - |
+| 2. Marketing Pages | 4/4 | Complete | 2026-04-26 |
 | 3. Blog System | 0/6 | Not started | - |
 | 4. Content Generator | 0/5 | Not started | - |
