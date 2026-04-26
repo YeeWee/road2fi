@@ -1,8 +1,13 @@
+import Hero from "@/components/home/Hero"
+import Philosophy from "@/components/home/Philosophy"
+import About from "@/components/home/About"
+
 export default function Home() {
   return (
-    <main>
-      <h1>Road to Fi</h1>
-      <p>Financial Independence, Retire Early</p>
-    </main>
+    <>
+      <Hero />
+      <Philosophy />
+      <About />
+    </>
   )
 }
