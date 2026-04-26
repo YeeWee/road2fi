@@ -8,7 +8,7 @@ A marketing website and blog for a personal investment firm helping ordinary peo
 
 - [x] **Phase 1: Foundation** — Project setup, layout infrastructure, content layer — *2026-04-26*
 - [x] **Phase 2: Marketing Pages** - Homepage with hero, philosophy, about, header/footer — *2026-04-26*
-- [ ] **Phase 3: Blog System** - Blog list page and individual post pages with Markdown rendering
+- [x] **Phase 3: Blog System** - Blog list page and individual post pages with Markdown rendering — *2026-04-26*
 - [ ] **Phase 4: Content Generator** - Hidden /gen page for AI-powered blog post creation
 
 ## Phase Details
@@ -66,8 +66,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Configure typography plugin, build blog list page at /blog with PostCard components (BLOG-01, BLOG-02, BLOG-05, BLOG-06)
-- [ ] 03-02: Build individual blog post page at /blog/[slug] with Markdown renderer, create sample post (BLOG-03, BLOG-04, BLOG-05, BLOG-06)
+- [x] 03-01: Configure typography plugin, build blog list page at /blog with PostCard components (BLOG-01, BLOG-02, BLOG-05, BLOG-06)
+- [x] 03-02: Build individual blog post page at /blog/[slug] with Markdown renderer, create sample post (BLOG-03, BLOG-04, BLOG-05, BLOG-06)
 
 ### Phase 4: Content Generator
 **Goal**: Hidden /gen page for AI-powered blog post generation from URLs
@@ -98,5 +98,5 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete | 2026-04-26 |
 | 2. Marketing Pages | 4/4 | Complete | 2026-04-26 |
-| 3. Blog System | 0/2 | Not started | - |
+| 3. Blog System | 2/2 | Complete | 2026-04-26 |
 | 4. Content Generator | 0/5 | Not started | - |
