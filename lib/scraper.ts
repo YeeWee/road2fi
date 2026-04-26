@@ -1,5 +1,5 @@
 import * as cheerio from 'cheerio'
-import { YouTubeTranscript } from 'youtube-transcript'
+import { YoutubeTranscript } from 'youtube-transcript'
 import { detectUrlType } from './url-utils'
 
 interface ScrapedContent {
@@ -17,8 +17,8 @@ async function scrapeYouTube(url: string): Promise<ScrapedContent> {
 
   let transcript = ''
   try {
-    const entries = await YouTubeTranscript.fetchTranscript(videoId)
-    transcript = entries.map(e => e.text).join(' ')
+    const entries = await YoutubeTranscript.fetchTranscript(videoId)
+    transcript = entries.map((e: { text: string }) => e.text).join(' ')
   } catch {
     // Transcript unavailable — fall back to oEmbed metadata only
   }
