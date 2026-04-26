@@ -3,14 +3,63 @@
 
 @theme {
   --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
   --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  /* Brand colors — warm editorial palette */
+  --color-brand: oklch(0.35 0.10 30);
+  --color-brand-hover: oklch(0.30 0.09 30);
+  --color-brand-light: oklch(0.55 0.08 30);
+  --color-accent: oklch(0.55 0.15 80);
+  --color-accent-hover: oklch(0.48 0.14 80);
+
+  /* Neutrals */
+  --color-cream: oklch(0.97 0.004 80);
+  --color-warm-gray-50: oklch(0.97 0.003 30);
+  --color-warm-gray-100: oklch(0.94 0.005 30);
+  --color-warm-gray-200: oklch(0.90 0.007 30);
+  --color-warm-gray-300: oklch(0.82 0.008 30);
+  --color-warm-gray-400: oklch(0.66 0.010 30);
+  --color-warm-gray-500: oklch(0.52 0.012 30);
+  --color-warm-gray-600: oklch(0.44 0.012 30);
+  --color-warm-gray-700: oklch(0.36 0.012 30);
+  --color-warm-gray-800: oklch(0.26 0.012 30);
+  --color-warm-gray-900: oklch(0.18 0.012 30);
+
+  /* Spacing */
+  --spacing-section: 5rem;
+
+  /* Typography */
+  --text-fluid-hero: clamp(2.5rem, 5vw + 1rem, 4.5rem);
+  --text-fluid-h1: clamp(2rem, 3.5vw + 0.5rem, 3rem);
+  --text-fluid-h2: clamp(1.5rem, 2.5vw + 0.5rem, 2.25rem);
+  --text-fluid-h3: clamp(1.125rem, 1.5vw + 0.5rem, 1.5rem);
+  --text-fluid-body: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
+  --text-fluid-lead: clamp(1.125rem, 1vw + 0.75rem, 1.375rem);
 }
 
-/* Hero section animations */
-@keyframes fadeIn {
+/* Base typography */
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  color: var(--color-warm-gray-800);
+  font-size: var(--text-fluid-body);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  text-wrap: pretty;
+}
+
+/* Scroll-triggered fade-in */
+@keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(1rem);
+    transform: translateY(1.5rem);
   }
   to {
     opacity: 1;
@@ -18,11 +67,53 @@
   }
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.8s ease-out forwards;
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
-.animate-fadeIn-delay {
-  animation: fadeIn 0.8s ease-out 0.2s forwards;
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fadeInUp-delay {
+  animation: fadeInUp 0.8s ease-out 0.15s forwards;
   opacity: 0;
+}
+
+.animate-fadeInUp-delay-2 {
+  animation: fadeInUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+/* Subtle scroll indicator bounce */
+@keyframes gentleBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+.animate-gentle-bounce {
+  animation: gentleBounce 2s ease-in-out infinite;
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Warm gradient line for visual separators */
+.warm-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+  border: none;
+}
+
+/* Prose overrides for blog content */
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  font-family: var(--font-serif), Georgia, serif;
 }
