@@ -34,7 +34,10 @@ export async function getAllPosts(): Promise<Post[]> {
         content,
       }
     })
-  return posts.sort((a, b) => (a.date < b.date ? 1 : -1))
+  return posts.sort((a, b) => {
+    if (a.date !== b.date) return a.date < b.date ? 1 : -1
+    return a.title.localeCompare(b.title)
+  })
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
