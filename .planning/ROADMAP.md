@@ -63,15 +63,11 @@ Plans:
   4. Blog posts render with proper typography: headings, paragraphs, lists, code blocks
   5. Blog list and post pages are fully responsive on mobile devices
 
-**Plans**: 6 plans
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: Build blog list page at /blog with posts sorted by date
-- [ ] 03-02: Build PostCard component displaying thumbnail, title, excerpt, and date
-- [ ] 03-03: Build individual blog post page at /blog/[slug] with generateStaticParams
-- [ ] 03-04: Create sample Markdown posts with proper frontmatter (title, date, excerpt, thumbnail, slug)
-- [ ] 03-05: Configure Markdown renderer with proper typography styling
-- [ ] 03-06: Ensure responsive design for blog list and post pages
+- [ ] 03-01: Configure typography plugin, build blog list page at /blog with PostCard components (BLOG-01, BLOG-02, BLOG-05, BLOG-06)
+- [ ] 03-02: Build individual blog post page at /blog/[slug] with Markdown renderer, create sample post (BLOG-03, BLOG-04, BLOG-05, BLOG-06)
 
 ### Phase 4: Content Generator
 **Goal**: Hidden /gen page for AI-powered blog post generation from URLs
@@ -102,5 +98,5 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation | 5/5 | Complete | 2026-04-26 |
 | 2. Marketing Pages | 4/4 | Complete | 2026-04-26 |
-| 3. Blog System | 0/6 | Not started | - |
+| 3. Blog System | 0/2 | Not started | - |
 | 4. Content Generator | 0/5 | Not started | - |
