@@ -67,6 +67,16 @@ function renderInline(text: string): React.ReactNode {
       continue
     }
 
+    // Image: ![alt](url)
+    const imgMatch = remaining.match(/^!\[([^\]]*)\]\(([^)]+)\)/)
+    if (imgMatch) {
+      parts.push(
+        <img key={key++} src={imgMatch[2]} alt={imgMatch[1]} className="rounded-xl w-full" />
+      )
+      remaining = remaining.slice(imgMatch[0].length)
+      continue
+    }
+
     // Link: [text](url)
     const linkMatch = remaining.match(/^\[([^\]]+)\]\(([^)]+)\)/)
     if (linkMatch) {
@@ -190,6 +200,18 @@ function MarkdownRenderer({ content }: { content: string }) {
       continue
     }
 
+    // Block image: ![alt](url)
+    if (trimmed.startsWith("![")) {
+      flushList()
+      const imgMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)/)
+      if (imgMatch) {
+        elements.push(
+          <img key={elements.length} src={imgMatch[2]} alt={imgMatch[1]} className="rounded-xl w-full my-8" />
+        )
+        continue
+      }
+    }
+
     if (trimmed.startsWith("- ") || trimmed.startsWith("* ")) {
       inList = true
       listItems.push(renderInline(trimmed.substring(2)))
@@ -267,6 +289,17 @@ export default async function PostPage({
             <span>{readingTime} min read</span>
           </div>
         </header>
+
+        {/* Thumbnail image */}
+        {post.thumbnail && (
+          <figure className="mb-12">
+            <img
+              src={post.thumbnail}
+              alt=""
+              className="rounded-xl w-full h-auto object-cover"
+            />
+          </figure>
+        )}
 
         {/* Warm divider */}
         <hr className="warm-divider max-w-xs mx-auto mb-12" />
