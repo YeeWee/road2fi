@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { generatePost } from './actions'
 
 interface GeneratedPost {
   title: string
@@ -28,9 +29,12 @@ export default function GenForm() {
 
     setLoading(true)
     try {
-      // @ts-ignore - generatePost will be implemented in ./actions
-      const post = await generatePost(url)
-      setResult(post)
+      const res = await generatePost(url)
+      if (res.success && res.post) {
+        setResult(res.post)
+      } else {
+        setError(res.error ?? 'Generation failed')
+      }
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Generation failed')
     } finally {
@@ -40,14 +44,8 @@ export default function GenForm() {
 
   async function handleSave() {
     if (!result) return
-    try {
-      // @ts-ignore - savePostAction will be implemented in ./actions
-      await savePostAction(result)
-      setResult(null)
-      setUrl('')
-    } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : 'Save failed')
-    }
+    // savePostAction will be implemented in plan 04-05
+    setError('Save functionality is not yet implemented.')
   }
 
   function handleDiscard() {
