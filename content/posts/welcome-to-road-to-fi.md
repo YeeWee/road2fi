@@ -2,7 +2,7 @@
 title: "Welcome to Road2Fi"
 date: "2026-04-26"
 excerpt: "Why I decided to write about this journey toward financial independence — and what you'll find here."
-thumbnail: ""
+thumbnail: "/images/posts/welcome-to-road-to-fi/cover.svg"
 ---
 
 Hey, welcome to Road2Fi.
