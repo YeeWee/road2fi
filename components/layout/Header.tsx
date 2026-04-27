@@ -35,9 +35,9 @@ export default function Header() {
           <Link href="/blog" className="transition-colors hover:text-warm-gray-900">
             Blog
           </Link>
-          <a href="#about" className="transition-colors hover:text-warm-gray-900">
+          <Link href="/#about" className="transition-colors hover:text-warm-gray-900">
             About
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
