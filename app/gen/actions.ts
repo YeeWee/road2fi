@@ -3,6 +3,7 @@ import { isValidUrl, detectUrlType } from '../../lib/url-utils'
 import { scrapeContent } from '../../lib/scraper'
 import { generateBlogPost } from '../../lib/generator'
 import { savePost } from '../../lib/posts'
+import { downloadImage } from '../../lib/image-utils'
 import { revalidatePath } from 'next/cache'
 
 interface GenerateResult {
@@ -42,13 +43,15 @@ export async function generatePost(url: string): Promise<GenerateResult> {
       .replace(/-+/g, '-')
       .slice(0, 80)
 
+    const localThumbnail = await downloadImage(scraped.thumbnail, slug)
+
     return {
       success: true,
       post: {
         title: generated.title,
         content: generated.content,
         excerpt: generated.excerpt,
-        thumbnail: scraped.thumbnail,
+        thumbnail: localThumbnail || scraped.thumbnail,
         slug,
       },
     }
