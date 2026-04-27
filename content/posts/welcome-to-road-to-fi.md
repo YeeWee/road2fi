@@ -1,11 +1,11 @@
 ---
-title: "Welcome to Road to Fi"
+title: "Welcome to Road2Fi"
 date: "2026-04-26"
 excerpt: "Why I decided to write about this journey toward financial independence — and what you'll find here."
 thumbnail: ""
 ---
 
-Hey, welcome to Road to Fi.
+Hey, welcome to Road2Fi.
 
 I'll be honest — the idea of starting this blog has been circling in my head for a long time. Not because I have some impressive investing track record to show off, but because **I'm just an ordinary person trying to figure out how to build a more secure life for myself and the people I care about.**
 
