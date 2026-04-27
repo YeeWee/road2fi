@@ -34,8 +34,8 @@ export default function Footer() {
               Contact
             </h4>
             <p className="text-sm text-warm-gray-500">
-              <a href="mailto:hello@roadtofi.com" className="transition-colors hover:text-warm-gray-900">
-                hello@roadtofi.com
+              <a href="mailto:kurt@roadtofi.com" className="transition-colors hover:text-warm-gray-900">
+                kurt@roadtofi.com
               </a>
             </p>
           </div>
